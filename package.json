@@ -1,0 +1,27 @@
+{
+  "name": "grunes",
+  "author": "Gürgün Dayıoğlu",
+  "license": "MIT",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./*.js": "./src/node/*.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "eslint . && prettier --check .",
+    "test:fix": "eslint --fix . && prettier --write ."
+  },
+  "devDependencies": {
+    "@fastify/pre-commit": ">=2.1.0",
+    "grules": ">=0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gurgunday/grunes.git"
+  }
+}
