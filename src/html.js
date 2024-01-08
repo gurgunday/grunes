@@ -45,7 +45,7 @@ const html = ({ raw: literals }, ...expressions) => {
       expression = expression.replace(escapeRegExp, escapeFunction);
     }
 
-    accumulator += literal += expression;
+    accumulator += literal + expression;
   }
 
   accumulator += literals[lastLiteralIndex];
