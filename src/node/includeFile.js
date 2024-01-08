@@ -7,13 +7,15 @@ const fileCache = new Map();
 /**
  * @param {string} path
  * @returns {string}
+ * @throws {Error}
  */
 const includeFile = (path) => {
-  let file = fileCache.get(path);
+  const pathString = `${path}`;
+  let file = fileCache.get(pathString);
 
   if (file === undefined) {
-    file = readFileSync(path, readFileSyncOptions);
-    fileCache.set(path, file);
+    file = readFileSync(pathString, readFileSyncOptions);
+    fileCache.set(pathString, file);
   }
 
   return file;
